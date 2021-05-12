@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/product_service';
+const mongoUri = 'mongodb://54.176.225.135/product_service';
 
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  family: 4,
 })
   .catch((err) => {
     console.log('Error on connect', err);
