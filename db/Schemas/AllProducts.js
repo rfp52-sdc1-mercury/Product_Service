@@ -19,7 +19,7 @@ let find = (page, count, callback) => {
     } else {
       callback(null, success);
     }
-  }).hint({'id': 1}).limit(count).skip((page-1)*count)
+  }).hint({'id': 1}).sort({'id': 1}).limit(count).skip((page-1)*count)
 }
 
 module.exports.find = find;
